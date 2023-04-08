@@ -1,0 +1,151 @@
+/* Imports and colors vars */
+
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root {
+    --clr-orange: hsl(31, 77%, 52%);
+    --clr-cyan: hsl(184, 100%, 22%);
+    --clr-darkcyan: hsl(179, 100%, 13%);
+
+    --clr-trans-white: hsla(0, 0%, 100%, 0.75);
+    --clr-lightgrey: hsl(0, 0%, 95%);
+
+    --ff-main: 'Lexend Deca', sans-serif;
+    --ff-heads: 'Big Shoulders Display', cursive;
+}
+
+/* Generals */
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--ff-main);
+    background-color: var(--clr-lightgrey);
+    display: grid;
+    place-items: center;
+}
+
+/* Main */
+
+.principal {
+    display: flex;
+    max-width: 784px;
+    min-width: 320px;
+}
+
+/* Columns */
+
+.column {
+    padding: 3rem;
+    color: var(--clr-trans-white)
+}
+
+.principal .orange {
+    background-color: var(--clr-orange);
+    border-radius: 12px 0 0px 12px;
+}
+
+.principal .cyan {
+    background-color: var(--clr-cyan);
+}
+
+.principal .darkercyan {
+    background-color: var(--clr-darkcyan);
+    border-radius: 0px 12px 12px 0px;
+}
+
+/* Headings */
+
+.title {
+    font-family: var(--ff-heads);
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: var(--clr-lightgrey);
+}
+
+/* Paragraph */
+
+.text {
+    font-size: 0.79rem;
+    line-height: 1.5rem;
+    margin-bottom: 6rem;
+}
+
+/* Bottom/anchor */
+
+.btn {
+    text-decoration: none;
+    background-color: var(--clr-lightgrey);
+    padding: .8rem 1.8rem;
+    border-radius: 3rem;
+    font-size: 0.8rem;
+}
+
+/* Changing the colors of the bottoms */
+
+.orange .btn {
+    color: var(--clr-orange);
+}
+
+.cyan .btn {
+    color: var(--clr-cyan);
+}
+
+.darkercyan .btn {
+    color: var(--clr-darkcyan);
+}
+
+/* Hover */
+
+.btn:hover {
+    color: var(--clr-lightgrey);
+    background-color: inherit;
+    border: solid .1rem var(--clr-lightgrey);
+}
+
+/* Mobile */
+
+@media screen and (max-width: 784px) {
+    .principal {
+        display: block;
+        width: 85%;
+        padding: 5rem 0;
+    }
+    .principal .orange {
+        border-radius: 12px 12px 0 0;
+    }
+
+    .principal .darkercyan {
+        border-radius: 0 0 12px 12px;
+    }
+
+    .text {
+        font-size: 1rem;
+        margin-bottom: 3rem;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .principal {
+        display: block;
+        width: 100%;
+        padding: 0rem;
+    }
+    .principal .orange {
+        border-radius: 0;
+    }
+
+    .principal .darkercyan {
+        border-radius: 0;
+    }
+
+}
